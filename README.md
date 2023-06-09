@@ -12,7 +12,6 @@ frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) and frame_height = int(cap.
 
 15-16. display_width = 800 and display_height = 600: These lines define the desired width and height for displaying the video frames.
 
-19-20. scale_width = display_width / frame_width and scale_height = display_height / frame_height: These lines calculate the scaling factors for resizing the frames to the desired display size.
 
 output = cv2.VideoWriter("output.mp4", cv2.VideoWriter_fourcc(*"mp4v"), 30.0, (frame_width, frame_height)): This line creates a video writer object to save the processed frames as an output video. The output video will be saved as "output.mp4" using the MP4V codec, with a frame rate of 30 frames per second.
 25-58. The code inside the while loop reads each frame from the video capture, resizes it, performs object detection using the YOLO model, and draws bounding boxes and labels around the detected objects.
